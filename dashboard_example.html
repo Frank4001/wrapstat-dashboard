@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WrapStat Training Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -846,6 +847,9 @@
     </div>
 
     <script>
+        // Register ChartDataLabels plugin
+        Chart.register(ChartDataLabels);
+        
         // Knowledge Assessment Chart
         const knowledgeCtx = document.getElementById('knowledgeChart').getContext('2d');
         new Chart(knowledgeCtx, {
@@ -1171,7 +1175,7 @@
                     datalabels: {
                         display: true,
                         anchor: 'center',
-                        align: 'right',
+                        align: 'center',
                         color: '#ffffff',
                         font: {
                             weight: 'bold',
@@ -1179,8 +1183,7 @@
                         },
                         formatter: function(value) {
                             return value.toFixed(2) + '/5';
-                        },
-                        offset: -10
+                        }
                     }
                 },
                 scales: {
