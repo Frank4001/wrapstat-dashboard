@@ -1,0 +1,250 @@
+{
+  "timestamp": "2025-10-23T23:34:25.463177",
+  "data_summary": {
+    "total_responses": 38,
+    "avg_knowledge_improvement": 1.2894736842105263,
+    "avg_satisfaction": 4.140350877192983,
+    "completion_rate": 100.0
+  },
+  "predictive_model": {
+    "r2_score": -0.17333461538461514,
+    "rmse": 0.9205478441305119,
+    "feature_importance": [
+      {
+        "feature": "knowledge_before_numeric",
+        "importance": 0.6782122892493919
+      },
+      {
+        "feature": "content_understandable_numeric",
+        "importance": 0.07983129101699259
+      },
+      {
+        "feature": "content_visual_support_numeric",
+        "importance": 0.05145062670203264
+      },
+      {
+        "feature": "content_relevant_numeric",
+        "importance": 0.051137113697633955
+      },
+      {
+        "feature": "content_interactive_numeric",
+        "importance": 0.04645960288196349
+      },
+      {
+        "feature": "training_duration_minutes",
+        "importance": 0.04352524834262397
+      },
+      {
+        "feature": "content_engaging_numeric",
+        "importance": 0.029787364718538697
+      },
+      {
+        "feature": "tech_easy_access_numeric",
+        "importance": 0.012269551224782094
+      },
+      {
+        "feature": "content_user_friendly_numeric",
+        "importance": 0.007326912166040549
+      }
+    ]
+  },
+  "clustering": [
+    {
+      "cluster_id": 0,
+      "cluster_name": "High Performers",
+      "size": 17,
+      "avg_knowledge_baseline": 1.8823529411764706,
+      "avg_knowledge_improvement": 2.3529411764705883,
+      "avg_satisfaction": 4.446078431372548,
+      "avg_duration": 1.523529411764706,
+      "characteristics": [
+        "Low initial knowledge",
+        "High learning gains",
+        "High satisfaction"
+      ]
+    },
+    {
+      "cluster_id": 1,
+      "cluster_name": "Fast Learners",
+      "size": 7,
+      "avg_knowledge_baseline": 3.857142857142857,
+      "avg_knowledge_improvement": 0.5714285714285714,
+      "avg_satisfaction": 4.642857142857143,
+      "avg_duration": 3.102380952380952,
+      "characteristics": [
+        "High initial knowledge",
+        "Low learning gains",
+        "High satisfaction"
+      ]
+    },
+    {
+      "cluster_id": 2,
+      "cluster_name": "Struggling Learners",
+      "size": 14,
+      "avg_knowledge_baseline": 3.0714285714285716,
+      "avg_knowledge_improvement": 0.35714285714285715,
+      "avg_satisfaction": 3.517857142857143,
+      "avg_duration": 1.2952380952380955,
+      "characteristics": [
+        "Moderate initial knowledge",
+        "Low learning gains",
+        "Moderate satisfaction"
+      ]
+    }
+  ],
+  "correlations": {
+    "matrix": {
+      "knowledge_improvement": {
+        "knowledge_improvement": 1.0,
+        "knowledge_before_numeric": -0.8258333814397524,
+        "content_engaging_numeric": 0.2808490261534797,
+        "content_relevant_numeric": 0.5255461241384854,
+        "content_interactive_numeric": 0.26861019244495643,
+        "content_visual_support_numeric": 0.531846621459477,
+        "training_duration_minutes": -0.02661266841123612,
+        "satisfaction_overall": 0.5087700450607489
+      },
+      "knowledge_before_numeric": {
+        "knowledge_improvement": -0.8258333814397524,
+        "knowledge_before_numeric": 1.0,
+        "content_engaging_numeric": 0.0585779186129007,
+        "content_relevant_numeric": -0.21507378567911795,
+        "content_interactive_numeric": 0.0387032676549522,
+        "content_visual_support_numeric": -0.21618258295342951,
+        "training_duration_minutes": 0.09246831446786796,
+        "satisfaction_overall": -0.12863428920299513
+      },
+      "content_engaging_numeric": {
+        "knowledge_improvement": 0.2808490261534797,
+        "knowledge_before_numeric": 0.0585779186129007,
+        "content_engaging_numeric": 1.0,
+        "content_relevant_numeric": 0.49734201562401487,
+        "content_interactive_numeric": 0.627450980392157,
+        "content_visual_support_numeric": 0.6265898575805402,
+        "training_duration_minutes": 0.0840774681137475,
+        "satisfaction_overall": 0.8047361522102044
+      },
+      "content_relevant_numeric": {
+        "knowledge_improvement": 0.5255461241384854,
+        "knowledge_before_numeric": -0.21507378567911795,
+        "content_engaging_numeric": 0.49734201562401487,
+        "content_relevant_numeric": 1.0,
+        "content_interactive_numeric": 0.47304991679126623,
+        "content_visual_support_numeric": 0.8016964766795436,
+        "training_duration_minutes": 0.2583258619468143,
+        "satisfaction_overall": 0.8623278296008787
+      },
+      "content_interactive_numeric": {
+        "knowledge_improvement": 0.26861019244495643,
+        "knowledge_before_numeric": 0.0387032676549522,
+        "content_engaging_numeric": 0.627450980392157,
+        "content_relevant_numeric": 0.47304991679126623,
+        "content_interactive_numeric": 1.0,
+        "content_visual_support_numeric": 0.4150586100396644,
+        "training_duration_minutes": 0.23507399279257496,
+        "satisfaction_overall": 0.6140934862271641
+      },
+      "content_visual_support_numeric": {
+        "knowledge_improvement": 0.531846621459477,
+        "knowledge_before_numeric": -0.21618258295342951,
+        "content_engaging_numeric": 0.6265898575805402,
+        "content_relevant_numeric": 0.8016964766795436,
+        "content_interactive_numeric": 0.4150586100396644,
+        "content_visual_support_numeric": 1.0,
+        "training_duration_minutes": 0.13815700048184038,
+        "satisfaction_overall": 0.8968880374181627
+      },
+      "training_duration_minutes": {
+        "knowledge_improvement": -0.02661266841123612,
+        "knowledge_before_numeric": 0.09246831446786796,
+        "content_engaging_numeric": 0.0840774681137475,
+        "content_relevant_numeric": 0.2583258619468143,
+        "content_interactive_numeric": 0.23507399279257496,
+        "content_visual_support_numeric": 0.13815700048184038,
+        "training_duration_minutes": 1.0,
+        "satisfaction_overall": 0.18321377774485154
+      },
+      "satisfaction_overall": {
+        "knowledge_improvement": 0.5087700450607489,
+        "knowledge_before_numeric": -0.12863428920299513,
+        "content_engaging_numeric": 0.8047361522102044,
+        "content_relevant_numeric": 0.8623278296008787,
+        "content_interactive_numeric": 0.6140934862271641,
+        "content_visual_support_numeric": 0.8968880374181627,
+        "training_duration_minutes": 0.18321377774485154,
+        "satisfaction_overall": 1.0
+      }
+    },
+    "top_correlations": [
+      {
+        "feature": "knowledge_before_numeric",
+        "correlation": -0.8258333814397524
+      },
+      {
+        "feature": "content_visual_support_numeric",
+        "correlation": 0.531846621459477
+      },
+      {
+        "feature": "content_relevant_numeric",
+        "correlation": 0.5255461241384854
+      },
+      {
+        "feature": "satisfaction_overall",
+        "correlation": 0.5087700450607489
+      },
+      {
+        "feature": "content_engaging_numeric",
+        "correlation": 0.2808490261534797
+      },
+      {
+        "feature": "content_interactive_numeric",
+        "correlation": 0.26861019244495643
+      },
+      {
+        "feature": "training_duration_minutes",
+        "correlation": -0.02661266841123612
+      }
+    ]
+  },
+  "anomalies": {
+    "negative_knowledge_change": {
+      "count": 1,
+      "responses": [
+        {
+          "response_id": "R_6eyHfukLaXjD24Y",
+          "knowledge_before_numeric": 5,
+          "knowledge_after_numeric": 3,
+          "knowledge_improvement": -2
+        }
+      ]
+    },
+    "statistical_outliers": {
+      "count": 1,
+      "threshold": 2.0,
+      "percentage": 2.631578947368421
+    }
+  },
+  "recommendations": [
+    {
+      "feature": "content_understandable_numeric",
+      "current_score": 4.131578947368421,
+      "importance": 0.07983129101699259,
+      "improvement_potential": 0.0693271737779146,
+      "priority": "Low"
+    },
+    {
+      "feature": "content_interactive_numeric",
+      "current_score": 3.5789473684210527,
+      "importance": 0.04645960288196349,
+      "improvement_potential": 0.06602154093752706,
+      "priority": "Low"
+    },
+    {
+      "feature": "content_visual_support_numeric",
+      "current_score": 4.45945945945946,
+      "importance": 0.05145062670203264,
+      "improvement_potential": 0.02781114956866628,
+      "priority": "Low"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+python launcher.py --api        # Full real-time features
+python launcher.py --static     # Static dashboard only
