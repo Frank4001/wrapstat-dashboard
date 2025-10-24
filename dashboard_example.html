@@ -1394,13 +1394,16 @@
 
         // Knowledge Improvement Distribution Chart
         const improvementCtx = document.getElementById('improvementChart').getContext('2d');
+        // Put the data into a variable so we can compute a sensible top margin
+        const improvementData = [1, 9, 12, 9, 7]; // Actual improvement distribution
+        const improvementMax = Math.max(...improvementData);
         new Chart(improvementCtx, {
             type: 'bar',
             data: {
                 labels: ['-2 Points', '0 Points', '+1 Point', '+2 Points', '+3 Points'],
                 datasets: [{
                     label: 'Number of Participants',
-                    data: [1, 9, 12, 9, 7], // Actual improvement distribution
+                    data: improvementData,
                     backgroundColor: 'rgba(119, 184, 224, 0.8)',
                     borderColor: 'rgba(119, 184, 224, 1)',
                     borderWidth: 1
@@ -1416,6 +1419,7 @@
                         display: true,
                         anchor: 'end',
                         align: 'top',
+                        clip: false, // allow labels to appear outside the chart area if needed
                         color: '#2c2c2c',
                         font: {
                             weight: 'bold',
@@ -1427,9 +1431,16 @@
                         offset: 4
                     }
                 },
+                layout: {
+                    padding: {
+                        top: 18 // give extra space at the top so labels aren't clipped
+                    }
+                },
                 scales: {
                     y: {
                         beginAtZero: true,
+                        // Set suggestedMax slightly above the largest bar so the label can fit
+                        suggestedMax: Math.ceil(improvementMax * 1.15) || (improvementMax + 2),
                         title: {
                             display: true,
                             text: 'Number of Participants',
