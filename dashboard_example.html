@@ -1140,6 +1140,31 @@
                                 weight: '600'
                             }
                         }
+                    },
+                    datalabels: {
+                        display: true,
+                        // Draw labels after datasets so they appear on top of the radar polygon
+                        drawTime: 'afterDatasetsDraw',
+                        anchor: function(context) {
+                            // position labels slightly outside the data point
+                            return 'end';
+                        },
+                        align: function(context) {
+                            return 'end';
+                        },
+                        offset: 8,
+                        backgroundColor: 'rgba(255,255,255,0.85)',
+                        borderRadius: 4,
+                        padding: 4,
+                        color: '#1c1c1c',
+                        font: {
+                            weight: '600',
+                            size: 11
+                        },
+                        clip: false,
+                        formatter: function(value) {
+                            return value.toFixed(2);
+                        }
                     }
                 }
             }
